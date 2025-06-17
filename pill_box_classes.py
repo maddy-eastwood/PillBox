@@ -1,6 +1,6 @@
 import math, random
 import pygame, sys
-
+import time
 
 class Playingfield:
     NO_INTERSECTION = 0
@@ -243,13 +243,12 @@ class Playingfield:
             # segment range checks
 
             # check x range of the bullet segment
-            if xi_bullet <= x_intersection <= xf_bullet or \
-                    xf_bullet <= x_intersection <= xi_bullet:
+            if ((xi_bullet <= x_intersection <= xf_bullet) or
+                    (xf_bullet <= x_intersection <= xi_bullet)):
                 # check the x range of the test segment
-                if xi_test <= x_intersection <= xf_test or \
-                        xf_test <= x_intersection <= xi_test:
+                if ((xi_test <= x_intersection <= xf_test) or
+                        (xf_test <= x_intersection <= xi_test)):
                     return True
-
         return False
 
     def check_game_intersections(self, xi_bullet: float, xf_bullet: float, yi_bullet: float, yf_bullet: float) -> int:
@@ -354,10 +353,10 @@ class Buttons:
         # this method will check whether a button has been pressed
         event_list = []
         for event in self.button_dict.keys():
-            if (self.button_dict[event]['x'] - self.button_dict[event]['width'] / 2 <= x <= self.button_dict[event][
-                'x'] + self.button_dict[event]['width'] / 2) and \
+            if ((self.button_dict[event]['x'] - self.button_dict[event]['width'] / 2 <= x <= self.button_dict[event][
+                'x'] + self.button_dict[event]['width'] / 2) and
                     (self.button_dict[event]['y'] - self.button_dict[event]['height'] / 2 <= y <=
-                     self.button_dict[event]['y'] + self.button_dict[event]['height'] / 2):
+                     self.button_dict[event]['y'] + self.button_dict[event]['height'] / 2)):
                 event_list.append(event)
         return event_list
 

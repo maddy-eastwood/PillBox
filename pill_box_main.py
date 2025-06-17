@@ -1,5 +1,4 @@
 from pill_box_classes import *
-import time
 
 # added to git repo
 
@@ -11,7 +10,7 @@ def main():
 
     #initialize the GUI
     pygame.init()
-    pygame.display.set_caption("Pillbox")
+    pygame.display.set_caption("PillBox")
     screen = pygame.display.set_mode((width, height))
     start_screen_mode = True
 
@@ -24,7 +23,6 @@ def main():
         y=int(height / 2),
         font_size=int(0.05 * height),
         label='START')
-
 
     # create a playing field variable
     field = None
@@ -83,8 +81,10 @@ def main():
                             selected_event = ''
                         print(f'FIRE1: speed={field.velocity1}, angle={field.angle1}')
                         seconds = 0
-                        bullet = Bullet(screen, field.velocity1, field.angle1, field.x_lbase, field.y_lplane-(3+field.base_height), seconds)
-                        bullet.draw_bullet() #draws initial bullet/starting position on base
+                        # draws initial bullet/starting position on base
+                        bullet = Bullet(screen, field.velocity1, field.angle1, field.x_lbase,
+                                        field.y_lplane-(3+field.base_height), seconds)
+                        bullet.draw_bullet()
                         test = Playingfield.NO_INTERSECTION  # to enter the loop
                         while seconds < 50 and test == Playingfield.NO_INTERSECTION: #while bullet has not had an intersection
                             seconds += 0.25
@@ -95,7 +95,7 @@ def main():
                             if test == Playingfield.NO_INTERSECTION:
                                 bullet.draw_bullet()
                             pygame.display.update()
-                            pygame.time.delay(50)
+                            pygame.time.delay(35)
                         # check if right base was hit
                         if test == Playingfield.RIGHT_BASE:
                             field.player1_score += 100
@@ -118,7 +118,8 @@ def main():
                             selected_event = ''
                         print(f'FIRE2: speed={field.velocity2}, angle={field.angle2}')
                         seconds = 0
-                        bullet = Bullet(screen, field.velocity2, field.angle2, field.x_rbase, field.y_rplane-(3+field.base_height), seconds)
+                        bullet = Bullet(screen, field.velocity2, field.angle2, field.x_rbase,
+                                        field.y_rplane-(3+field.base_height), seconds)
                         bullet.draw_bullet()
                         test = Playingfield.NO_INTERSECTION
                         while seconds < 50 and test == Playingfield.NO_INTERSECTION: #while bullet has not had an intersection
@@ -130,7 +131,7 @@ def main():
                             if test == Playingfield.NO_INTERSECTION:
                                 bullet.draw_bullet()
                             pygame.display.update()
-                            pygame.time.delay(50)
+                            pygame.time.delay(35)
                         # check if left base was hit
                         if test == Playingfield.LEFT_BASE:
                             field.player2_score += 100
