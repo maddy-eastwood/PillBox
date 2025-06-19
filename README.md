@@ -22,5 +22,10 @@ wanted players to be able to determine how long they want to play. The Restart b
 To run this game, you just need pill_box_main.py, pill_box_classes.py, and to have Python and Pygame installed.
 Once you've put the two Python files into a folder of your choosing, create a virtual environment by following these instructions:
 1. Open your terminal or command-line interface
+2. Navigate to the directory where you placed pill_box_main.py and pill_box_classes.py
+3. To create a virtual environment, run this line: `python -m venv pb_venv` or `python3 -m venv pb_venv`
+4. To activate the virtual environment, run: `source pb_venv/bin/activate`
+5. Install dependency: `pip install -r requirements.txt`
+
 
 **GUI Size:** On lines 8 and 9 in pill_box_main.py, you can edit the width and height of the GUI in pixels to fit your screen as you wish.

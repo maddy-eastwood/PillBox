@@ -213,7 +213,7 @@ class Playingfield:
         self.buttons.draw_buttons()
 
     @staticmethod
-    def compute_line_constants(xi: float, xf: float, yi: float, yf: float) -> ([None | float], [None | float]):
+    def compute_line_constants(xi: float, xf: float, yi: float, yf: float) -> tuple[None | float, None | float]:
         if xf == xi:
             return (None, None)
         else:
