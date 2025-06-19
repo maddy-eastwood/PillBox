@@ -101,7 +101,7 @@ def main():
                             field.player1_score += 100
                             field.buttons.button_dict['player1_score']['label'] = f'PLAYER 1 SCORE: {field.player1_score}'
                             field.buttons.draw_button('player1_score')
-                            pygame.time.delay(300)
+                            pygame.time.delay(500)
                             selected_event = ''
                             field.compute_field()
                             field.draw()
@@ -137,7 +137,7 @@ def main():
                             field.player2_score += 100
                             field.buttons.button_dict['player2_score']['label'] = f'PLAYER 2 SCORE: {field.player2_score}'
                             field.buttons.draw_button('player2_score')
-                            pygame.time.delay(300)
+                            pygame.time.delay(500)
                             selected_event = ''
                             field.compute_field()
                             field.draw()
