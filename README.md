@@ -1,9 +1,10 @@
-# <center> PillBox </center>
+<h1 style="text-align: center;"> PillBox</p>
 
-### <center> Welcome to PillBox! </center>
-#### By: Madeleine Eastwood
+<h3 style="text-align: center"> Welcome to PillBox! </h3>
 
-**Demo Video:**
+**By: Madeleine Eastwood**
+
+**Demo Video:** coming soon
 
 **About:** Using just Python programming and the Pygame module, I reimagined a 2-player, vintage game from the 70's known as Pillbox.
 During a conversation about our favorite games, a family friend of mine told me about how he used to play Pillbox. 
@@ -24,7 +25,7 @@ Once you've put the two Python files into a folder of your choosing, create a vi
 1. Open your terminal or command-line interface
 2. Navigate to the directory where you placed pill_box_main.py and pill_box_classes.py
 3. To create a virtual environment, run this line: `python -m venv pb_venv` or `python3 -m venv pb_venv`
-4. To activate the virtual environment, run: `source pb_venv/bin/activate`
+4. To activate the virtual environment, Mac users run: `source pb_venv/bin/activate` and Windows users run: `pb_venv\Scripts\activate`
 5. Install dependency: `pip install -r requirements.txt`
 
 
