@@ -1,6 +1,6 @@
 <h1 style="text-align: center;"> PillBox</p>
 
-<h3 style="text-align: center"> Welcome to PillBox! </h3>
+<h3 style="text-align: center;"> Welcome to PillBox! </h3>
 
 **By: Madeleine Eastwood**
 
