@@ -42,7 +42,7 @@ def main():
             if start_screen_mode: #welcome screen
                 screen.fill('cadetblue1')
                 welcome_font = pygame.font.Font(None, int(0.1*height))
-                welcome_surf = welcome_font.render("Welcome to Pillbox", True, 'dark blue')
+                welcome_surf = welcome_font.render("Welcome to PillBox", True, 'dark blue')
                 welcome_rect = welcome_surf.get_rect(center=(int(width/2), int(height/3)))
                 screen.blit(welcome_surf, welcome_rect)
                 start_buttons.draw_buttons()
