@@ -4,7 +4,7 @@
 
 **By: Madeleine Eastwood**
 
-**Demo Video:** coming soon
+**Demo Video:** https://youtu.be/fzAZWqp3A3A
 
 **About:** Using just Python programming and the Pygame module, I reimagined a 2-player, vintage game from the 70's known as Pillbox.
 During a conversation about our favorite games, a family friend of mine told me about how he used to play Pillbox. 
